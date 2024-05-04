@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Momentum</title>
+	</head>
+	<body>
+		<h2 id="title">Grab me!</h2>
+		<div class="container">
+			<div class="ani-icon__circle"></div>
+			<div class="ani-icon">
+				<div class="ani-icon__line"></div>
+				<div class="ani-icon__line"></div>
+				<div class="ani-icon__line"></div>
+				<div class="ani-icon__line"></div>
+				<div class="ani-icon__line"></div>
+			</div>
+		</div>
+		<div>
+			<h1>Random Number Game</h1>
+			<form>
+			  <label for="range">Generate a number between 0 to</label>
+			  <input type="number" min="0" id="range" required />
+			  </br>
+			  </br>
+			  <label for="guess">Guess the number: </label>
+			  <input type="number" min="0" id="guess" required />
+			  <input type="submit" value="play" />
+			</form>
+			<div class="test hidden">
+			  <span></span>
+			  <h3></h3>
+			</div>
+			
+			<script src="home.js"></script>
+		</div>
+		<div>
+			<h2 id="clock">00:00</h2>
+		</div>
+		<div id="quote">
+			<span></span>
+			<span></span>
+		</div>
+		<form id="todo-form">
+			<input type="text" placeholder="Write a To Do and Press Enter" required />
+		</form>
+		<ul id="todo-list"></ul>
+		<div id="weather">
+			<span></span>
+			<span></span>
+		  </div>
+		<script src="app.js"></script>
+		<script src="practiceJs/gretting.js"></script>
+		<script src="practiceJs/clock.js"></script>
+		<script src="practiceJs/quote.js"></script>
+		<script src="practiceJs/background.js"></script>
+		<script src="practiceJs/todo.js"></script>
+		<script src="practiceJs/weather.js"></script>
+	</body>
+</html>
