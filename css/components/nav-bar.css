@@ -1,0 +1,28 @@
+.nav {
+	width: 100%;
+	padding: 20px 50px;
+	box-sizing: border-box;
+	position: fixed;
+	bottom: 0;
+	background-color: #f9f9fa;
+	border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.nav__list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav__link {
+	/* 
+	이걸 해줘야 채팅 수 나타내는걸 absolute로 표현한게 이 영역내에서 적용됨.
+	absolute는 가장 가까운 relative 부모를 기준으로 적용됨.
+	*/
+	position: relative;
+}
+
+.nav__notification {
+	position: absolute;
+	top: -8px;
+	right: -8px;
+}

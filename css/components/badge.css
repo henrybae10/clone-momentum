@@ -1,0 +1,15 @@
+.badge {
+	width: 13px;
+	height: 13px;
+	/*span에서는 display 설정을 안 하면 위 가로세로가 적용 안됨*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: tomato;
+	border: 1px solid tomato;
+	/* 원을 만들고 싶으면 width 반을 입력하면 된다. */
+	border-radius: 7px;
+	color: white;
+	font-size: 12px;
+	font-weight: 600;
+}

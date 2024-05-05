@@ -3,43 +3,68 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/style.css" />
-		<title>Momentum</title>
+		<title>Kakao Talk Clone</title>
+		<link rel="stylesheet" href="css/styles.css" />
 	</head>
 	<body>
-		<div class="clock-section">
-			<h2 id="clock"></h2>
+		<div class="status-bar">
+			<div class="status-bar__column">
+				<span>No Service</span>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 640 512"
+					width="15px"
+					height="15px">
+					<path
+						d="M54.2 202.9C123.2 136.7 216.8 96 320 96s196.8 40.7 265.8 106.9c12.8 12.2 33 11.8 45.2-.9s11.8-33-.9-45.2C549.7 79.5 440.4 32 320 32S90.3 79.5 9.8 156.7C-2.9 169-3.3 189.2 8.9 202s32.5 13.2 45.2 .9zM320 256c56.8 0 108.6 21.1 148.2 56c13.3 11.7 33.5 10.4 45.2-2.8s10.4-33.5-2.8-45.2C459.8 219.2 393 192 320 192s-139.8 27.2-190.5 72c-13.3 11.7-14.5 31.9-2.8 45.2s31.9 14.5 45.2 2.8c39.5-34.9 91.3-56 148.2-56zm64 160a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z" />
+				</svg>
+			</div>
+			<div class="status-bar__column">
+				<spna>18:00</spna>
+			</div>
+			<div class="status-bar__column">
+				<span>80%</span>
+				<svg
+					class="status-bar__column__svg-icon-battery"
+					xmlns="http://www.w3.org/2000/svg"
+					height="20"
+					width="22.5"
+					viewBox="0 0 576 512">
+					<path
+						d="M464 160c8.8 0 16 7.2 16 16V336c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16H464zM80 96C35.8 96 0 131.8 0 176V336c0 44.2 35.8 80 80 80H464c44.2 0 80-35.8 80-80V320c17.7 0 32-14.3 32-32V224c0-17.7-14.3-32-32-32V176c0-44.2-35.8-80-80-80H80zm368 96H96V320H448V192z" />
+				</svg>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 448 512"
+					width="15px"
+					height="15px">
+					<path
+						d="M349.4 44.6c5.9-13.7 1.5-29.7-10.6-38.5s-28.6-8-39.9 1.8l-256 224c-10 8.8-13.6 22.9-8.9 35.3S50.7 288 64 288H175.5L98.6 467.4c-5.9 13.7-1.5 29.7 10.6 38.5s28.6 8 39.9-1.8l256-224c10-8.8 13.6-22.9 8.9-35.3s-16.6-20.7-30-20.7H272.5L349.4 44.6z" />
+				</svg>
+			</div>
 		</div>
-
-		<form class="login-section">
-			<input id="login-input" type="text" placeholder="Input ur ID" />
-			<input id="login-button" type="submit" value="Log in" />
+		<header class="welcome-header">
+			<h1 class="welcome-header__title">Welcome to Kakao Talk</h1>
+			<p class="welcome-header__text">
+				Log in with ur email or phone number and enjoy ur kakao talk.
+			</p>
+		</header>
+		<!--
+			form에는 action이 있는데 어떤 페이지로 data를 보낼지 명시하는 것이다.
+			method는 POST, GET을 입력. POST는 백엔드 서버에 정보를 전송.
+			일반적으로 GET은 보안성이 떨어지기 때문에 URL에 포함돼도 되는 정보가 있을 때만 사용.
+			로그인 같은 곳에는 POST를 사용해야 한다.
+			input에 name을 명시해주고 submit해보면 넘어간 페이지 URL에 해당 값들이 있다.
+		-->
+		<form action="friends.html" method="GET" id="login-form">
+			<input
+				name="email"
+				type="text"
+				placeholder="Email or phone number" />
+			<input name="password" type="password" placeholder="Password" />
+			<input type="submit" value="Log In" />
+			<!--이걸 form에 넣은 이유는 a가 매우 많은건데 이거만을 위해 따로 id나 class를 만들기 싫으니.-->
+			<a href="#">Find Kakao Account or Password</a>
 		</form>
-		<div class="hidden user-section">
-			<h2 class="user">Hello!</h2>
-		</div>
-		<div class="todo-section">
-			<form id="todo-form">
-				<input
-					id="todo-input"
-					type="text"
-					placeholder="Write a To Do and Press Enter"
-					required />
-			</form>
-			<ul id="todo-list"></ul>
-		</div>
-		<div class="local-section">
-			<div class="weather-section">
-				<span class="weather"> </span>
-			</div>
-			<div class="location-section">
-				<span class="location"> </span>
-			</div>
-		</div>
-		<script src="js/clock.js"></script>
-		<script src="js/logIn.js"></script>
-		<script src="js/todo.js"></script>
-		<script src="js/background.js"></script>
-		<script src="js/weather.js"></script>
 	</body>
 </html>

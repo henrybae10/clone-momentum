@@ -1,0 +1,36 @@
+.status-bar {
+	position: fixed;
+	top: 0;
+	display: flex;
+	/*
+		if use space-between clock element is not positioned exact center. 
+		so use below codes.
+	*/
+	justify-content: center;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 5px 3px;
+}
+
+.status-bar__column {
+	width: 33%;
+}
+
+.status-bar__column:first-child span {
+	margin-right: 5px;
+}
+
+.status-bar__column:nth-child(2) {
+	display: flex;
+	justify-content: center;
+}
+
+.status-bar__column:last-child {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.status-bar__column .status-bar__column__svg-icon-battery {
+	margin: 0 5px;
+}

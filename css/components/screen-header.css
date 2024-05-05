@@ -1,0 +1,17 @@
+.screen-haeder {
+	margin-top: 20px;
+	margin-bottom: 15px;
+	padding: var(--horizontal-space);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.screen-haeder__title {
+	font-size: 30px;
+	font-weight: 600;
+}
+
+.screen-haeder__icons span {
+	margin-left: 25px;
+}
